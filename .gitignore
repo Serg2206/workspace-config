@@ -1,0 +1,11 @@
+# Obsidian
+.obsidian/workspace*
+.obsidian/cache
+.trash/
+
+# OneDrive
+*.tmp
+~$*
+
+# PowerShell
+*.log
