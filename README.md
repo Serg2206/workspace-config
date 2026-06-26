@@ -1,43 +1,43 @@
-# Workspace Config
-
-Оптимальная конфигурация рабочего пространства: Obsidian + Notion + MS 365 + GitHub + Базы данных
-
-## Архитектура
-
-```
-Obsidian (локальные заметки) ←→ OneDrive (синхронизация)
-    ↓
-Notion (команда + проекты) ←→ GitHub (код + версии)
-    ↓
-Neon (PostgreSQL) + Supabase (auth/storage)
-    ↓
-MS 365 (Word/VBA + OneDrive)
-```
+# Workspace Config — MS 365 Design System
 
 ## Компоненты
 
-| Папка | Описание |
-|-------|----------|
-| `ms365-toolkit/` | PowerShell + VBA автоматизация |
-| `obsidian/` | Конфигурация Obsidian vault |
-| `notion/` | Notion API интеграции |
-| `scripts/` | Интеграционные скрипты |
+### MS 365 Toolkit
+- OneDrive Launcher
+- VBA Macros (14 macros)
+- Junction Links
+- Academic Templates (CRediT/Funding/COI)
+- Daily Notes Automation
 
-## Быстрый старт
+### Design System
+- 9 modern fonts (Montserrat, Inter, Merriweather, etc.)
+- Word template: Academic-Modern.dotx
+- PowerPoint template: Conference-Pro.potx
 
+### Web Hub
+- Live: https://iusigf6hsqxqy.kimi.page
+- 5 pages: Home, Templates, Fonts, Dashboard, Workflow
+
+### Integration Scripts
+- Get-WorkspaceStatus.ps1 — Dashboard
+- Sync-ObsidianToNotion.ps1 — Notion sync
+- Backup-ToGitHub.ps1 — Git backup
+- New-CommandCenter.ps1 — Interactive menu
+
+### Notion Databases
+- Research Projects
+- Integration Tasks
+
+## Quick Start
 ```powershell
-# 1. Установить MS 365 Toolkit
-.\ms365-toolkit\Setup-All.ps1
+# Install everything
+.\ms365-design\install\Setup-All.ps1
 
-# 2. Настроить Junction для Obsidian
-.\scripts\Setup-ObsidianSync.ps1
-
-# 3. Зарегистрировать задачи Task Scheduler
-.\scripts\Register-AllTasks.ps1
+# Launch command center
+.\scripts\New-CommandCenter.ps1
 ```
 
-## Ссылки
-
-- [Notion: Research Projects](https://app.notion.com)
-- [Notion: Integration Tasks](https://app.notion.com)
-- [Neon DB Console](https://console.neon.tech)
+## Links
+- [GitHub](https://github.com/Serg2206/workspace-config)
+- [Notion](https://app.notion.com/p/39d4117edbe54bb0832fcaca02051baa)
+- [Web Hub](https://iusigf6hsqxqy.kimi.page)
